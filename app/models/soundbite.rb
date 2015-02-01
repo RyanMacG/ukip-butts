@@ -35,7 +35,7 @@ class Soundbite
     'The Lords',
     'gypsies',
     'speed cameras',
-    'Russel Brand'
+    'Russell Brand'
   ]
 
   def self.generated_bite
