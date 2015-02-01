@@ -17,7 +17,7 @@ class Soundbite
     'flooding the UK with',
     'giving British jobs to',
     'no better than',
-    'Turning our grandchildren into',
+    'turning our grandchildren into',
     'run by',
     'in a coalition with',
     'a propaganda tool for',
