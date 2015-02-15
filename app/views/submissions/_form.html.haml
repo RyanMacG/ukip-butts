@@ -1,0 +1,11 @@
+.row
+  .col-md-6.col-md-offset-3
+    = bootstrap_form_for @submission do |f|
+      = render 'shared/error_messages', object: f.object
+      = f.text_field :first_phrase
+      = f.text_field :second_phrase
+      = f.text_field :third_phrase
+
+      = hidden_field_tag :do_not_use
+
+      = f.submit 'Submit soundbite', class: [:btn, 'btn-primary']
