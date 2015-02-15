@@ -1,5 +1,6 @@
 .row
   .col-md-6.col-md-offset-3
+    %p Submit your soundbite, if it's funny (and works on it's own) I'll add it to the mix
     = bootstrap_form_for @submission do |f|
       = render 'shared/error_messages', object: f.object
       = f.text_field :first_phrase
