@@ -9,10 +9,13 @@ class SubmissionsController < ApplicationController
     if @submission.valid?
       if params[:do_not_use].blank?
         @submission.save
-        # send email to me!
+        flash[:success] = 'Thank you for your submission!'
+        redirect_to submit_path
+        NotificationMailer.submission(soundbite: @submission).deliver_now
       end
+    else
+      render 'new'
     end
-    render 'new'
   end
 
   private
