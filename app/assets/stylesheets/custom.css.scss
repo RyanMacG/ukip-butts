@@ -7,7 +7,7 @@ $gray-medium-light: #eaeaea;
 $purple: #800089;
 $ukip-yellow: #eef004;
 
-@mixin box_sizing {
+@mixin box-sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box
@@ -153,13 +153,16 @@ p {
   }
 }
 
-/* forms */
+// forms
 
-input, textarea, select, .uneditable-input {
+input,
+textarea,
+select,
+.uneditable-input {
+  @include box-sizing;
   border: 1px solid #bbb;
-  width: 100%;
   margin-bottom: 15px;
-  @include box_sizing;
+  width: 100%;
 }
 
 input {
@@ -172,10 +175,11 @@ label.required:after {
 }
 
 #error_explanation {
-  color: red;
-  border: 3px solid rgba(239, 121, 132, 0.9);
   background: rgba(245, 168, 179, 0.54);
-  .alert.alert-error{
+  border: 3px solid rgba(239, 121, 132, 0.9);
+  color: #ff0000;
+  margin-bottom: 2%;
+  .alert.alert-error {
     margin-bottom: 1%;
   }
   ul {
@@ -183,5 +187,4 @@ label.required:after {
     margin: 0 0 10px 0;
     list-style: none;
   }
-  margin-bottom: 2%;
 }
