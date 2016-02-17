@@ -1,5 +1,4 @@
 class BasePagesController < ApplicationController
-
   def home
     @page_title = 'Home'
   end
