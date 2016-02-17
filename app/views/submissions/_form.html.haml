@@ -1,11 +1,11 @@
 .row
   .col-md-6.col-md-offset-3
     %p Submit your soundbite, if it's funny (and works on it's own) I'll add it to the mix
-    = bootstrap_form_for @submission do |f|
+    = form_for @submission do |f|
       = render 'shared/error_messages', object: f.object
-      = f.text_field :first_phrase
-      = f.text_field :second_phrase
-      = f.text_field :third_phrase
+      = f.text_field :first_phrase, placeholder: Soundbite::COLUMN_ONE.sample
+      = f.text_field :second_phrase, placeholder: Soundbite::COLUMN_TWO.sample
+      = f.text_field :third_phrase, placeholder: Soundbite::COLUMN_THREE.sample
 
       = hidden_field_tag :do_not_use
 
